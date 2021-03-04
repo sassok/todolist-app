@@ -6,19 +6,23 @@
   <div class="row">
 
     <div class="col-sm" id="object">
-    <% @emails.each do |email| %>
+      <% @emails.each do |email| %>
       <ul class="list-group">
-    <li class="list-group-item"><%= email.object%></li>
+      <li class="list-group-item"><%= link_to email.object, email_path(email.id), remote: true%></li>
+      
+      <script>
+      let btnLoop = document.getElementsByClassName('list-group-item')[0];
+
+      </script>
       </ul>
+
     <% end %>
+
     </div>
-    <div class="col-sm">
-    <% @emails.each do |email| %>
-      <ul class="list-group">
-    <li class="list-group-item"><%= email.body%></li>
-      </ul>
-<% end %>
-    </div>
+    <div class="col-sm" id="body">
+
+   </div>
   </div>
 </div>
 
+window.location.reload();

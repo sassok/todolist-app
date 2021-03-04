@@ -22,4 +22,8 @@ class EmailsController < ApplicationController
     end
   end
 
+  def show
+  @emails = Email.all
+  end
+
 end
