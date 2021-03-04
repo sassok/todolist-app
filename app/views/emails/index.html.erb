@@ -5,9 +5,9 @@
 
   <div class="row">
 
-    <div class="col-sm">
+    <div class="col-sm" id="object">
     <% @emails.each do |email| %>
-      <ul class="list-group" id="object">
+      <ul class="list-group">
     <li class="list-group-item"><%= email.object%></li>
       </ul>
     <% end %>
