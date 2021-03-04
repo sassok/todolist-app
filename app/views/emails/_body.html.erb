@@ -1,8 +1,13 @@
 
-  <h3>Objet : <%= Email.find(params[:id]).object %></h3>
-  <p><%= Email.find(params[:id]).body %></p>
+  
 
-  <%=link_to"Marquer comme non-lu", root_path, method: :post, remote: true, class:"btn btn-secondary"%>
-  <%=link_to"Supprimer", root_path, method: :post, remote: true, class:"btn btn-danger"%>
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h2 class="card-title">Objet : <%= Email.find(params[:id]).object %></h2>
+    <p class="card-text"><%= Email.find(params[:id]).body %></p>
+    <a href="#" class="card-link"><%=link_to"Marquer comme non-lu", root_path, method: :post, remote: true, class:"btn btn-secondary"%></a>
+    <a href="#" class="card-link"><%=link_to"Supprimer", root_path, method: :post, remote: true, class:"btn btn-danger"%> </a>
+  </div>
+</div>
 
  
