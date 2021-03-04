@@ -1,5 +1,4 @@
-<h1>Mails#index</h1>
-<p>Find me in app/views/mails/index.html.erb</p>
+
  <%=link_to"New", emails_path, method: :post, remote: true, class:"btn btn-primary"%>
 
 <div class="container">
@@ -8,10 +7,10 @@
 
     <div class="col-sm">
     <% @emails.each do |email| %>
-      <ul class="list-group">
+      <ul class="list-group" id="object">
     <li class="list-group-item"><%= email.object%></li>
       </ul>
-<% end %>
+    <% end %>
     </div>
     <div class="col-sm">
     <% @emails.each do |email| %>

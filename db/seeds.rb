@@ -17,3 +17,5 @@ require 'faker'
     my_task.save
   end
 end
+
+Email.create!(object: Faker::Lorem.word, body: Faker::Lorem.paragraph)
