@@ -8,12 +8,7 @@
     <div class="col-sm" id="object">
       <% @emails.each do |email| %>
       <ul class="list-group">
-      <li class="list-group-item"><%= link_to email.object, email_path(email.id), remote: true%></li>
-      
-      <script>
-      let btnLoop = document.getElementsByClassName('list-group-item')[0];
-
-      </script>
+      <li class="list-group-item" href="#" ><%= link_to email.object, email_path(email.id), remote: true%></li>
       </ul>
 
     <% end %>
@@ -25,4 +20,3 @@
   </div>
 </div>
 
-window.location.reload();
